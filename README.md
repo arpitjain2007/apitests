@@ -64,12 +64,16 @@ Make sure you have **Node.js** installed. If not, download and install it from [
 
 After installing Node.js, run the following command to install the necessary dependencies:
 
-``npm install 
+`npm install` 
 
 ### 2. Run the Tests 
 
-```bash 
-npm playwright test
+`npm playwright test`
+
+### CI Configuration
+
+The CI pipeline is configured using **GitHub Actions**. It is triggered on every push to the `master` branch or when a pull request is made targeting the `master` branch. 
+The pipeline installs dependencies, sets up Node.js, and runs the Playwright tests using the command `npx playwright test`. Test results can be viewed directly in the GitHub Actions workflow logs.
 
 
 
